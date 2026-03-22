@@ -1,0 +1,94 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 256 34% 7%;
+  --foreground: 254 20% 95%;
+  --card: 257 31% 11%;
+  --card-foreground: 254 20% 95%;
+  --popover: 257 31% 11%;
+  --popover-foreground: 254 20% 95%;
+  --primary: 266 78% 71%;
+  --primary-foreground: 257 55% 10%;
+  --secondary: 255 24% 17%;
+  --secondary-foreground: 252 17% 92%;
+  --muted: 257 23% 15%;
+  --muted-foreground: 250 12% 72%;
+  --accent: 283 66% 66%;
+  --accent-foreground: 257 52% 11%;
+  --destructive: 0 73% 53%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 256 20% 27%;
+  --input: 255 22% 23%;
+  --ring: 266 78% 71%;
+  --radius: 0.85rem;
+}
+
+* {
+  @apply border-border;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-background text-foreground;
+  font-family: "Inter", "Segoe UI", "Noto Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Helvetica Neue",
+    Arial, ui-sans-serif, system-ui, sans-serif;
+  background-image: radial-gradient(circle at 12% 16%, rgba(140, 95, 255, 0.24), transparent 32%),
+    radial-gradient(circle at 86% 4%, rgba(214, 140, 255, 0.15), transparent 24%),
+    linear-gradient(160deg, #0a0812 0%, #0f0b1d 45%, #090613 100%);
+  line-height: 1.55;
+  letter-spacing: 0.002em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.surface-grid {
+  background-image: linear-gradient(rgba(127, 103, 176, 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127, 103, 176, 0.16) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+.surface-premium {
+  border: 1px solid hsl(var(--border) / 0.62);
+  background: linear-gradient(155deg, hsl(var(--card) / 0.84), hsl(var(--card) / 0.62));
+  box-shadow: 0 0 0 1px hsl(var(--border) / 0.38), 0 24px 64px -40px rgba(132, 96, 255, 0.54);
+  backdrop-filter: blur(18px);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+p,
+label,
+button,
+a {
+  text-wrap: pretty;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+.wallet-adapter-button,
+.wallet-adapter-modal,
+.wallet-adapter-modal-title,
+.wallet-adapter-modal-list .wallet-adapter-button,
+.wallet-adapter-dropdown-list,
+.wallet-adapter-dropdown-list-item {
+  font-family: "Inter", "Segoe UI", "Noto Sans", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Helvetica Neue",
+    Arial, ui-sans-serif, system-ui, sans-serif !important;
+}
